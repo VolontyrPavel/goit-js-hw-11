@@ -31,7 +31,7 @@ let observer = new IntersectionObserver(scroll, options);
 async function onSubmit(e) {
     e.preventDefault();
     newGallery.innerHTML = '';
-    page = 10;
+    page = 1;
     observer.unobserve(guard);
 
     const inInput = form.elements.searchQuery.value.trim();
