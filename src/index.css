@@ -5,3 +5,20 @@ body {
     padding-right: 15px;
     padding-left: 15px;
 }
+
+.search-form {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    background-color: #0f6eeb;
+}
+
+.gallery {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+}

@@ -73,7 +73,7 @@ function makeMarkup(data) {
     return data.hits.map(({ largeImageURL, previewURL, tags, likes, views, comments, downloads }) => 
     `<div class="photo-card list">
         <a class='gallery__link' href='${largeImageURL}'>
-            <img class='gallery__image' src="${previewURL}" alt="${tags}" loading="lazy" />
+            <img class='gallery__image' src="${previewURL}" alt="${tags}" width='250px' height='165px' loading="lazy" />
         </a>
         <div class="info">
             <p class="info-item">
