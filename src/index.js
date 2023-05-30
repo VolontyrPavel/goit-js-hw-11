@@ -15,7 +15,7 @@ form.addEventListener('submit', onSubmit);
 
 const newGallery = document.querySelector('.gallery');
 
-let page = 1;
+let page = 0;
 let allPages;
 
 const guard = document.querySelector('.js-guard');
@@ -31,6 +31,8 @@ let observer = new IntersectionObserver(scroll, options);
 async function onSubmit(e) {
     e.preventDefault();
     newGallery.innerHTML = '';
+    page = 10;
+    observer.unobserve(guard);
 
     const inInput = form.elements.searchQuery.value.trim();
 
@@ -101,6 +103,7 @@ function scroll(entries, observer) {
             createScroll();
         }
         if (allPages <= page) {
+            Notiflix.Notify.warning("We're sorry, but you've reached the end of search results");
             observer.unobserve(guard);
         }
     })
